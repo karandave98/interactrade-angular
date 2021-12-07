@@ -1,0 +1,39 @@
+<div>
+    Alert History List
+</div>
+<div>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Sr No.</th>
+        <th scope="col">Open</th>
+        <th scope="col">high</th>
+        <th scope="col">low</th>
+        <th scope="col">close</th>
+        <th scope="col">exchange</th>
+        <th scope="col">ticker</th>
+        <th scope="col">volume</th>
+        <th scope="col">time</th>
+        <th scope="col">timenow</th>
+        <th scope="col">type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let item of alertList; let i = index">
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.open }}</td>
+          <td>{{ item.high }}</td>
+          <td>{{ item.low }}</td>
+          <td>{{ item.close }}</td>
+          <td>{{ item.exchange }}</td>
+          <td>{{ item.ticker }}</td>
+          <td>{{ item.volume }}</td>
+          <td>{{ item.time | date: "dd/MM/YYYY hh:mm:ss a" }}</td>
+          <td>{{ item.timenow | date: "dd/MM/YYYY hh:mm:ss a" }}</td>
+          <td>{{ item.type }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
